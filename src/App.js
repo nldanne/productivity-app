@@ -47,6 +47,10 @@ function App() {
     saveToLocal();
   }, [todos, status, saveToLocal]);
 
+  const handleRemoveAll = () => {
+    setTodos([]);
+  }
+
   return (
     <div className="App">
       <h1>What's the plan for today?</h1>
@@ -62,6 +66,15 @@ function App() {
         setTodos={setTodos}  
         filteredTodos={filteredTodos}
       />
+      {todos.length > 0 && 
+        <button 
+          type='button' 
+          name='clear-all' 
+          value='delete'
+          className='remove-all-btn'
+          onClick={handleRemoveAll}
+        > Remove all
+      </button>}
     </div>
   );
 }
