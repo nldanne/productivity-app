@@ -5,5 +5,37 @@ h1 {
 .App {
   align-content: center;
   max-width: 700px;
-  margin: 20px auto;
+  margin: 60px auto;
+}
+
+.remove-all-btn {
+  margin-top: 20px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+}
+
+.remove-all-btn::after {
+  position: absolute;
+  left: 0px;
+  bottom: -4px;
+  content: '';
+  height: 2px;
+  width: 80px;
+  background: white;
+
+}
+
+.remove-all-btn:hover {
+  color:#ff6dfd;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+    line-height: 0.8rem;
+  }
 }
