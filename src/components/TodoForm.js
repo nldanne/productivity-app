@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './TodoForm.css';
 
 const TodoForm = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
-  const [isClicked, setIsClicked] = useState({status: ''});
+  const [isClicked, setIsClicked] = useState('');
 
   const handleInputText = (event) => {
     setInputText(event.target.value);
@@ -21,7 +21,7 @@ const TodoForm = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
 
   const handleTaskStatus = (event) => {
     setStatus(event.target.value);
-    setIsClicked({status: event.target.value});
+    setIsClicked( event.target.value);
   };
 
   return (
@@ -39,12 +39,12 @@ const TodoForm = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
       {todos.length > 0 
       ?
       <div className='select'>
-        <button onClick={handleTaskStatus} type='button' name='filter' value='all' className={`filter-button ${isClicked.status === 'all' ? 'active' : ''}` }key='button1'> All</button>
-        <button onClick={handleTaskStatus} type='button' name='filter' value='completed' className={`filter-button ${isClicked.status === 'completed' ? 'active' : ''}` }key='button2'> Completed</button>
-        <button onClick={handleTaskStatus} type='button' name='filter' value='uncompleted' className={`filter-button ${isClicked.status === 'uncompleted' ? 'active' : ''}` }key='button3'> Uncompleted</button>
+        <button onClick={handleTaskStatus} type='button' name='filter' value='all' className={`filter-button ${isClicked === 'all' ? 'active' : ''}` }key='button1'> All</button>
+        <button onClick={handleTaskStatus} type='button' name='filter' value='completed' className={`filter-button ${isClicked === 'completed' ? 'active' : ''}` }key='button2'> Completed</button>
+        <button onClick={handleTaskStatus} type='button' name='filter' value='uncompleted' className={`filter-button ${isClicked === 'uncompleted' ? 'active' : ''}` }key='button3'> Uncompleted</button>
       </div>
       : 
-      <p>Add a new todo to start planning today!🚀</p>
+      <p>Add a new todo to start planning today 🚀</p>
       }
         
     </div>
