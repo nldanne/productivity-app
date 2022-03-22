@@ -3,14 +3,17 @@
   background-color: white;
   margin-bottom: 10px;
   display: grid;
-  grid-template-columns: 5% 90% 5%;
+  grid-template-columns: 4% 85% 4%;
+  gap: 3%;
   padding: 12px;
   border-radius: 5px;
 }
 
 .todo-row > li {
+  width: 90%;
   list-style-type: none;
-  padding-left: 6px;
+  height: auto;
+  word-wrap: break-word;
 }
 
 .icons {
