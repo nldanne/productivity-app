@@ -1,6 +1,8 @@
 import React from 'react';
 import { RiCloseCircleLine } from 'react-icons/ri';
-import { BiCheckbox } from 'react-icons/bi';
+import { BiCheckbox, BiCheckboxChecked } from 'react-icons/bi';
+
+import './Todo.css';
 
 const Todo = ({ text, todo, todos, setTodos }) => {
 
@@ -21,14 +23,15 @@ const Todo = ({ text, todo, todos, setTodos }) => {
   };
 
   return (
-    <div className='todos'>
-      <BiCheckbox 
-        onClick={handleComplete}
-        className={`icons ${todo.completed ? 'check-on' : ''}`}
-      />
-      <li className={`todo-item ${todo.completed ? 'completed' : ''}`}>{text}</li>
+    <div className={`todo-row ${todo.completed ? 'completed' : ''}`}>
+      {todo.completed === false ? 
+        <BiCheckbox onClick={handleComplete} className={`icons`} />
+        :
+        <BiCheckboxChecked onClick={handleComplete} className='icons'/>
+      }
+      <li className='todo-item'>{text}</li>
       <RiCloseCircleLine 
-        className='icons'
+        className='icons delete'
         onClick={handleDelete}
       />
     </div>
