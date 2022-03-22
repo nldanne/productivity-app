@@ -10,6 +10,11 @@ const TodoForm = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    // prevent empty todo item to be added
+    if (!inputText || /^\s*$/.test(inputText)) {
+      return;
+    }
+
     setTodos([...todos, {text: inputText, completed: false, id: Math.floor(Math.random() * 10000) }]);
     setInputText('');
   };
