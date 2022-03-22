@@ -41,13 +41,6 @@ const TodoForm = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
       : 
       <p>Add a new todo to start planning today!🚀</p>
       }
-{/*
-          <select name='todos' className='filter-todo' onChange={handleTaskStatus}>
-            <option value='all'>All</option>
-            <option value='completed'>Completed</option>
-            <option value='uncompleted'>Uncompleted</option>
-          </select>
-*/}
         
     </div>
   )
