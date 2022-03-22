@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './TodoForm.css';
 
 const TodoForm = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
+  const [isClicked, setIsClicked] = useState({status: ''});
+
   const handleInputText = (event) => {
     setInputText(event.target.value);
   }
@@ -13,10 +16,11 @@ const TodoForm = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
 
   const handleTaskStatus = (event) => {
     setStatus(event.target.value);
+    setIsClicked({status: event.target.value});
   };
 
   return (
-    <div>
+    <div className='form-filter__container'>
       <form className='todo-form' onSubmit={handleSubmit}>
         <input 
           type='text' 
@@ -27,13 +31,24 @@ const TodoForm = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
         />
         <button className='todo-button' type='submit'> Add todo</button>
       </form>
-        <div className='select'>
+      {todos.length > 0 
+      ?
+      <div className='select'>
+        <button onClick={handleTaskStatus} type='button' name='filter' value='all' className={`filter-button ${isClicked.status === 'all' ? 'active' : ''}` }key='button1'> All</button>
+        <button onClick={handleTaskStatus} type='button' name='filter' value='completed' className={`filter-button ${isClicked.status === 'completed' ? 'active' : ''}` }key='button2'> Completed</button>
+        <button onClick={handleTaskStatus} type='button' name='filter' value='uncompleted' className={`filter-button ${isClicked.status === 'uncompleted' ? 'active' : ''}` }key='button3'> Uncompleted</button>
+      </div>
+      : 
+      <p>Add a new todo to start planning today!🚀</p>
+      }
+{/*
           <select name='todos' className='filter-todo' onChange={handleTaskStatus}>
             <option value='all'>All</option>
             <option value='completed'>Completed</option>
             <option value='uncompleted'>Uncompleted</option>
           </select>
-        </div>
+*/}
+        
     </div>
   )
 }
