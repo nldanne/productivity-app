@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {/*useState */} from 'react';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { BiCheckbox, BiCheckboxChecked } from 'react-icons/bi';
 
@@ -30,6 +30,12 @@ const Todo = ({ text, todo, todos, setTodos }) => {
         <BiCheckboxChecked onClick={handleComplete} className='icons'/>
       }
       <li className='todo-item'>{text}</li>
+      {/*
+      <TiEdit 
+        className='icons edit'
+        onClick={handleEdit}
+      />
+    */}
       <RiCloseCircleLine 
         className='icons delete'
         onClick={handleDelete}
