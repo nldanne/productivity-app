@@ -17,7 +17,10 @@ body {
       radial-gradient(100% 138.69% at 100% 0%, #0007A5 0%, #FF7A00 100%), 
       radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);
   background-blend-mode: screen, screen, lighten, overlay, lighten, difference, normal;
-  margin: 20px 15px;
+  padding: 10px;
+  /* display: flex;
+  flex-direction: column; */
+  position: relative;
 }
 
 code {
