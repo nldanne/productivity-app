@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
+import Footer from './components/Footer';
 
 import './App.css';
 
@@ -75,6 +76,7 @@ function App() {
           onClick={handleRemoveAll}
         > Remove all
       </button>}
+      <Footer />
     </div>
   );
 }
