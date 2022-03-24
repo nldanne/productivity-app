@@ -7,7 +7,7 @@ The app was built with React Js, custom CSS, React Icons and utilizing React Hoo
 
 The goal of this project was to practice CRUD operations while learning more about React Js, and I needed a simple application to track my todos.
 
-The website can be found on [Netlify](https://productivityapp-by-nldanne.netlify.app/
+The website can be found on [Netlify](https://productivityapp-by-nldanne.netlify.app/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/35a05453-2c41-4178-85b3-76a59a0e5682/deploy-status)](https://app.netlify.com/sites/productivityapp-by-nldanne/deploys)
 
