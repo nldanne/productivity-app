@@ -1,6 +1,6 @@
 # Productivity App - React Js
 
-<img src="https://github.com/nldanne/productivity-app/blob/master/docs/todo-app-thumbnail.jpg" alt="mockup of productivity app" width="600">
+<img src="https://github.com/nldanne/productivity-app/blob/master/docs/todo-app-thumbnail.jpg" alt="mockup of productivity app" width="900">
 
 A task management application that helps you stay organized and focused to make you get things done.
 The app was built with React Js, custom CSS, React Icons and utilizing React Hooks for state management.
