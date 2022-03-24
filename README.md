@@ -21,6 +21,5 @@ There are other functionalities that could be added, such as editing the text of
 
 
 # Sources 
-Icons were used from [React Icons library](https://react-icons.github.io/react-icons/)
-The css for the multi-gradient background is from [gradienta.io]
+Icons were used from [React Icons library](https://react-icons.github.io/react-icons/). The css for the multi-gradient background is from [gradienta.io](https://gradienta.io/)
 
